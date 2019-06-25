@@ -6,12 +6,12 @@
 
 buildPythonPackage rec {
   pname = "azure_cli_reservations";
-  version = "0.4.0";
+  version = "0.4.3";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "1vgm1b68vzxgf7a5vyn4gv9zrq0wkbhjj4dw5ss4wnxpwhii542x";
+    sha256 = "07yn79dwjrhhqsl4qsp9a4f35wp3z8xv33qi6zaxa64wwglfif1c";
   };
 
   propagatedBuildInputs = [

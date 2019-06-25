@@ -6,12 +6,12 @@
 
 buildPythonPackage rec {
   pname = "azure_cli_redis";
-  version = "0.3.2";
+  version = "0.4.4";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "0z7bzfc23af1jf9wnim0nfqyb8sx5ah9xfg1rs2r8sfgx0ab0k12";
+    sha256 = "0dfflmzvjn3snymkxg0pyzhz878sq55zzxl1q6k6kni5vj1cqafz";
   };
 
   propagatedBuildInputs = [

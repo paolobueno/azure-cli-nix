@@ -1,23 +1,21 @@
 { stdenv, buildPythonPackage, fetchPypi
 , azure-cli-command-modules-nspkg
 , azure-cli-core
-, whoosh
 }:
 
 buildPythonPackage rec {
   pname = "azure_cli_find";
-  version = "0.2.12";
+  version = "0.3.4";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "07g880xslb8sqwjp8j7bdm4pn8shnhw604qap5afcmmv7lfg36kk";
+    sha256 = "1m1v5dylazmgsfcnar0aapbgdbkzdxj9d8zzbbjzkwdpmba7nyl0";
   };
 
   propagatedBuildInputs = [
     azure-cli-command-modules-nspkg
     azure-cli-core
-    whoosh
   ];
 
   doCheck = false;

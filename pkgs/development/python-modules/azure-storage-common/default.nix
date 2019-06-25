@@ -8,12 +8,12 @@
 
 buildPythonPackage rec {
   pname = "azure_storage_common";
-  version = "1.3.0";
+  version = "1.4.2";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "0sqrr7raavnfhvdbxqbyxhp2qv7wsprg2mnf628gjaz8323af4m4";
+    sha256 = "0jly2yan1c52dz935psvcnj8vg8y925w7vb3jp4d28sswg61fj6y";
   };
 
   propagatedBuildInputs = [

@@ -54,6 +54,7 @@ self: super:
 
       azure-cli-appservice = python-super.callPackage ./pkgs/development/python-modules/azure-cli-appservice {
         urllib3 = my_urllib3;
+        fabric = python-self.Fabric;
       };
 
       azure-cli-backup = python-super.callPackage ./pkgs/development/python-modules/azure-cli-backup { };
@@ -107,9 +108,7 @@ self: super:
 
       azure-cli-hdinsight = python-super.callPackage ./pkgs/development/python-modules/azure-cli-hdinsight { };
 
-      azure-cli-interactive = python-super.callPackage ./pkgs/development/python-modules/azure-cli-interactive {
-        jmespath = my_jmespath;
-      };
+      azure-cli-interactive = python-super.callPackage ./pkgs/development/python-modules/azure-cli-interactive { };
 
       azure-cli-iot = python-super.callPackage ./pkgs/development/python-modules/azure-cli-iot { };
 
@@ -317,6 +316,23 @@ self: super:
 
       vsts-cd-manager = python-super.callPackage ./pkgs/development/python-modules/vsts-cd-manager { };
 
+      azure-cli-deploymentmanager = python-super.callPackage ./pkgs/development/python-modules/azure-cli-deploymentmanager { };
+      azure-cli-kusto = python-super.callPackage ./pkgs/development/python-modules/azure-cli-kusto { };
+      azure-cli-natgateway = python-super.callPackage ./pkgs/development/python-modules/azure-cli-natgateway { };
+      azure-cli-privatedns = python-super.callPackage ./pkgs/development/python-modules/azure-cli-privatedns { };
+      azure-cli-security = python-super.callPackage ./pkgs/development/python-modules/azure-cli-security { };
+      azure-cli-sqlvm = python-super.callPackage ./pkgs/development/python-modules/azure-cli-sqlvm { };
+      azure-cosmos = python-super.callPackage ./pkgs/development/python-modules/azure-cosmos { };
+      azure-functions-devops-build = python-super.callPackage ./pkgs/development/python-modules/azure-functions-devops-build {
+        # vsts = python-self.vsts;
+      };
+      azure-mgmt-applicationinsights = python-super.callPackage ./pkgs/development/python-modules/azure-mgmt-applicationinsights { };
+      azure-mgmt-deploymentmanager = python-super.callPackage ./pkgs/development/python-modules/azure-mgmt-deploymentmanager { };
+      azure-mgmt-imagebuilder = python-super.callPackage ./pkgs/development/python-modules/azure-mgmt-imagebuilder { };
+      azure-mgmt-kusto = python-super.callPackage ./pkgs/development/python-modules/azure-mgmt-kusto { };
+      azure-mgmt-privatedns = python-super.callPackage ./pkgs/development/python-modules/azure-mgmt-privatedns { };
+      azure-mgmt-security = python-super.callPackage ./pkgs/development/python-modules/azure-mgmt-security { };
+      azure-mgmt-sqlvirtualmachine = python-super.callPackage ./pkgs/development/python-modules/azure-mgmt-sqlvirtualmachine { };
     };
   };
 

@@ -7,12 +7,12 @@
 
 buildPythonPackage rec {
   pname = "azure_cli_ams";
-  version = "0.2.4";
+  version = "0.4.7";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "0bj2n2vsz2hrhrr9i35s12363kbl3wlprydbmqgxcrv8ij22s7dk";
+    sha256 = "03cm0r4mmhpfcnmd2f667mmjnjr1gkxfp4xp6vhf60h0b03id2g0";
   };
 
   postFixup = ''

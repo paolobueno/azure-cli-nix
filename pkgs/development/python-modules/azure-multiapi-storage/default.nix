@@ -9,12 +9,12 @@
 
 buildPythonPackage rec {
   pname = "azure_multiapi_storage";
-  version = "0.2.2";
+  version = "0.2.3";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "01cbdhsarsy3n0vg725xccj09a4fz1lbggchnka3lpj6mikkk9d3";
+    sha256 = "0ffqbymn5f4lnaq5ksx28xxawzbm9nq46xxlqg9gybsnfccsgpiw";
   };
 
   propagatedBuildInputs = [

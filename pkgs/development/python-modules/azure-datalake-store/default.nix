@@ -4,16 +4,17 @@
 , cffi
 , futures
 , pathlib2
+, requests
 }:
 
 buildPythonPackage rec {
   pname = "azure_datalake_store";
-  version = "0.0.34";
+  version = "0.0.39";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "0k9l03wyql35irpa0vad2zgvp9l44y1xv621z6ym7y1fawp64axn";
+    sha256 = "0qcnvsna3izqzx1xh30k28x2ipcr0qnipdxs5ah0m15n7l8h6mwr";
   };
 
   postFixup = ''
@@ -24,6 +25,7 @@ buildPythonPackage rec {
     adal
     azure-nspkg
     cffi
+    requests
   ]
     ++ stdenv.lib.optional (isPy27) futures
     ++ stdenv.lib.optional (pythonOlder "3.4") pathlib2;

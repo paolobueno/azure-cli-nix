@@ -5,7 +5,6 @@
 , azure-mgmt-containerinstance
 , azure-mgmt-loganalytics
 , azure-mgmt-network
-, azure-mgmt-resource
 , colorama
 , pyyaml
 , websocket_client
@@ -13,12 +12,12 @@
 
 buildPythonPackage rec {
   pname = "azure_cli_container";
-  version = "0.3.7";
+  version = "0.3.18";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "17rwwrwy33qf20s4h905ibpxhbfzgpjgr3qqrhs17q6lzr67dnfx";
+    sha256 = "0lybi3hz65j5c2zgc8s4yf6v4hkrj2fnm2rbah47y8h792hqs44p";
   };
 
   postFixup = ''
@@ -34,7 +33,6 @@ buildPythonPackage rec {
     azure-mgmt-containerinstance
     azure-mgmt-loganalytics
     azure-mgmt-network
-    azure-mgmt-resource
     colorama
     pyyaml
     websocket_client

@@ -62,7 +62,8 @@ getHash() {
     python="py3";
   fi
 
-  nix-prefetch-url "https://files.pythonhosted.org/packages/$python/${pname:0:1}/$pname/$pname-$version-$python-none-any.whl"
+  # nix-prefetch-url "https://files.pythonhosted.org/packages/$python/${pname:0:1}/$pname/$pname-$version-$python-none-any.whl"
+  nix-prefetch-url "https://files.pythonhosted.org/packages/source/a/${pname:0:1}/$pname-$version.zip"
 }
 
 updateHash() {

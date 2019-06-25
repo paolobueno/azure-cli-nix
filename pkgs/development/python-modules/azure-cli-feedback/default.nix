@@ -1,21 +1,19 @@
 { stdenv, buildPythonPackage, fetchPypi
-, applicationinsights
 , azure-cli-command-modules-nspkg
 , azure-cli-core
 }:
 
 buildPythonPackage rec {
   pname = "azure_cli_feedback";
-  version = "2.1.4";
+  version = "2.2.1";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "1pyw4nbaywhi96a9cp63xvj2bix9xlhhaf7rfjy9mcm1xwz4zbn8";
+    sha256 = "0zyivm5fc4falvzd4p4g4zsz83vjq170gg1z5giz2a4qnww9bkq9";
   };
 
   propagatedBuildInputs = [
-    applicationinsights
     azure-cli-command-modules-nspkg
     azure-cli-core
   ];

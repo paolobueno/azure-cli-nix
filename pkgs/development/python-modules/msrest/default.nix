@@ -9,12 +9,12 @@
 
 buildPythonPackage rec {
   pname = "msrest";
-  version = "0.6.1";
+  version = "0.6.7";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "06gfy360plqbzhxni2d7xvn0cv9k15bjvfq3ismk04l2wh095xqm";
+    sha256 = "1l2vlainlqdcgbrg60vdxcbs4sz2r0d2l3cbjrgq2pwp10rhjhw1";
   };
 
   # TODO (stesie): dependencies for python < 3.5

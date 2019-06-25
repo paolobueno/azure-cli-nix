@@ -6,12 +6,12 @@
 
 buildPythonPackage rec {
   pname = "azure_cli_maps";
-  version = "0.3.2";
+  version = "0.3.5";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "1l7arwv36j5zyy027g9wl6sv5r2hriw205w85lzjqxkdwi6dqcyj";
+    sha256 = "0gknc66pg71y7ijq39l6hd86i341qcqh2d7wjx40sbavnz8bn328";
   };
 
   propagatedBuildInputs = [

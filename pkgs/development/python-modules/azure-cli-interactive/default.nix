@@ -1,21 +1,17 @@
 { stdenv, buildPythonPackage, fetchPypi, python
-, applicationinsights
 , azure-cli-command-modules-nspkg
 , azure-cli-core
-, jmespath
 , prompt_toolkit
-, pyyaml
-, six
 }:
 
 buildPythonPackage rec {
   pname = "azure_cli_interactive";
-  version = "0.3.31";
+  version = "0.4.5";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "1s312j4rzcgpbf0nyh4l39p4mqmi7p5l9y4g4595zdz61flw6gw4";
+    sha256 = "0gpkssmazqakm3xidqz47mjpvr8v4cl4q70vvfjqpgif2f6m2p4v";
   };
 
   postFixup = ''
@@ -25,13 +21,9 @@ buildPythonPackage rec {
   '';
 
   propagatedBuildInputs = [
-    applicationinsights
     azure-cli-command-modules-nspkg
     azure-cli-core
-    jmespath
     prompt_toolkit
-    pyyaml
-    six
   ];
 
   doCheck = false;

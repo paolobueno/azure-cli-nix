@@ -4,6 +4,7 @@
 , azure-keyvault
 , azure-mgmt-authorization
 , azure-mgmt-compute
+, azure-mgmt-imagebuilder
 , azure-mgmt-keyvault
 , azure-mgmt-marketplaceordering
 , azure-mgmt-msi
@@ -13,12 +14,12 @@
 
 buildPythonPackage rec {
   pname = "azure_cli_vm";
-  version = "2.2.6";
+  version = "2.2.23";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "0x3l66j93nfcxchac6p3xb0crzmss9r7qk71bmlbc50amw5dzm85";
+    sha256 = "1s72naw3kacak68igvk5rcsnr144ya1x009p6xsxmzp66v8nqd7w";
   };
 
   postFixup = ''
@@ -33,6 +34,7 @@ buildPythonPackage rec {
     azure-keyvault
     azure-mgmt-authorization
     azure-mgmt-compute
+    azure-mgmt-imagebuilder
     azure-mgmt-keyvault
     azure-mgmt-marketplaceordering
     azure-mgmt-msi

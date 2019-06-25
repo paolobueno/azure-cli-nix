@@ -12,11 +12,13 @@
 , azure-cli-cdn
 , azure-cli-cloud
 , azure-cli-cognitiveservices
+, azure-cli-command-modules-nspkg
 , azure-cli-configure
 , azure-cli-consumption
 , azure-cli-container
 , azure-cli-core
 , azure-cli-cosmosdb
+, azure-cli-deploymentmanager
 , azure-cli-dla
 , azure-cli-dls
 , azure-cli-dms
@@ -30,12 +32,15 @@
 , azure-cli-iot
 , azure-cli-iotcentral
 , azure-cli-keyvault
+, azure-cli-kusto
 , azure-cli-lab
 , azure-cli-maps
 , azure-cli-monitor
+, azure-cli-natgateway
 , azure-cli-network
 , azure-cli-nspkg
 , azure-cli-policyinsights
+, azure-cli-privatedns
 , azure-cli-profile
 , azure-cli-rdbms
 , azure-cli-redis
@@ -44,22 +49,25 @@
 , azure-cli-resource
 , azure-cli-role
 , azure-cli-search
+, azure-cli-security
 , azure-cli-servicebus
 , azure-cli-servicefabric
 , azure-cli-signalr
 , azure-cli-sql
+, azure-cli-sqlvm
 , azure-cli-storage
+, azure-cli-telemetry
 , azure-cli-vm
 }:
 
 buildPythonPackage rec {
   pname = "azure_cli";
-  version = "2.0.49";
+  version = "2.0.67";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "1q1xswz4c994h616yjcfnszrl8rhdz6my9lalzjn0d7vvihpyhdk";
+    sha256 = "0cnzpa5b2pkzsh2qzbp8kgp1iir53avm24wzmr1c78fq9sv8zami";
   };
 
   propagatedBuildInputs = [
@@ -76,11 +84,13 @@ buildPythonPackage rec {
     azure-cli-cdn
     azure-cli-cloud
     azure-cli-cognitiveservices
+    azure-cli-command-modules-nspkg
     azure-cli-configure
     azure-cli-consumption
     azure-cli-container
     azure-cli-core
     azure-cli-cosmosdb
+    azure-cli-deploymentmanager
     azure-cli-dla
     azure-cli-dls
     azure-cli-dms
@@ -94,12 +104,15 @@ buildPythonPackage rec {
     azure-cli-iot
     azure-cli-iotcentral
     azure-cli-keyvault
+    azure-cli-kusto
     azure-cli-lab
     azure-cli-maps
     azure-cli-monitor
+    azure-cli-natgateway
     azure-cli-network
     azure-cli-nspkg
     azure-cli-policyinsights
+    azure-cli-privatedns
     azure-cli-profile
     azure-cli-rdbms
     azure-cli-redis
@@ -108,11 +121,14 @@ buildPythonPackage rec {
     azure-cli-resource
     azure-cli-role
     azure-cli-search
+    azure-cli-security
     azure-cli-servicebus
     azure-cli-servicefabric
     azure-cli-signalr
     azure-cli-sql
+    azure-cli-sqlvm
     azure-cli-storage
+    azure-cli-telemetry
     azure-cli-vm
   ];
 

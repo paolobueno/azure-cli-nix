@@ -7,12 +7,12 @@
 
 buildPythonPackage rec {
   pname = "azure_cli_storage";
-  version = "2.2.3";
+  version = "2.4.3";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "1srww6zr7aa4llbpkhz97k9ia55bqwz08f0qr11z8gisg5qn7nqz";
+    sha256 = "1y7za4vjc29cr690vjfm7lbc4si48kxd1096slp9cl04dqgcbslg";
   };
 
   postFixup = ''

@@ -7,12 +7,12 @@
 
 buildPythonPackage rec {
   pname = "azure_cli_servicebus";
-  version = "0.3.1";
+  version = "0.3.6";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "0is604fgclxkw1d234hkga3g8z6mdbz4v7z40r8xx2b1d12556bc";
+    sha256 = "0kj01ws875dc42hs181asclwqdn6i8lpn4yysl9sdww12ix3gpl6";
   };
 
   postFixup = ''

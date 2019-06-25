@@ -6,12 +6,12 @@
 
 buildPythonPackage rec {
   pname = "azure_cli_telemetry";
-  version = "1.0.0";
+  version = "1.0.2";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "0dc5yg28szg5pw4k0ybk95al2n50zfcgsmvq15s8hwvcvgv2xw3s";
+    sha256 = "0k6yawbncbk6a9kq0hzzjik3v24icsp8wd7y7bhkn6734awyavcl";
   };
 
   propagatedBuildInputs = [

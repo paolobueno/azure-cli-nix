@@ -1,22 +1,24 @@
 { stdenv, buildPythonPackage, fetchPypi, python
 , azure-common
 , azure-mgmt-nspkg
+, msrest
 , msrestazure
 }:
 
 buildPythonPackage rec {
   pname = "azure_mgmt_policyinsights";
-  version = "0.1.0";
+  version = "0.3.1";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "0jds22rfbg03ljc8i774qxc5ghr8i1r2njgzh80h6fl2pwqq7f29";
+    sha256 = "1jrm5nb03p1cv328bxn06h1ggvcj9fs3sh5919pc7p66c4dq7pzj";
   };
 
   propagatedBuildInputs = [
     azure-common
     azure-mgmt-nspkg
+    msrest
     msrestazure
   ];
 

@@ -1,22 +1,24 @@
 { stdenv, buildPythonPackage, fetchPypi
 , azure-common
 , azure-mgmt-nspkg
+, msrest
 , msrestazure
 }:
 
 buildPythonPackage rec {
   pname = "azure-mgmt-trafficmanager";
-  version = "0.50.0";
+  version = "0.51.0";
 
   src = fetchPypi {
     inherit pname version;
     extension = "zip";
-    sha256 = "0ssi8sdnwqqzlzfxnar3053hfi9g57n50h1rf5dkni1bm3m6fq8j";
+    sha256 = "11j123sc1db9nnkr24p46vap8xc51cgg78kr8gd2zrfg49qfg2pw";
   };
 
   propagatedBuildInputs = [
     azure-common
     azure-mgmt-nspkg
+    msrest
     msrestazure
   ];
 

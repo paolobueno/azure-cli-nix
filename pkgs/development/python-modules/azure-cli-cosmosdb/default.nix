@@ -1,18 +1,18 @@
 { stdenv, buildPythonPackage, fetchPypi, python
 , azure-cli-command-modules-nspkg
 , azure-cli-core
+, azure-cosmos
 , azure-mgmt-cosmosdb
-, pydocumentdb
 }:
 
 buildPythonPackage rec {
   pname = "azure_cli_cosmosdb";
-  version = "0.2.2";
+  version = "0.2.11";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "1zp46ylzxz9fghjsmfpp354gapxa99yfvna2f19x69hfd4wwgb3p";
+    sha256 = "1mdah4bi257xja1ljxaz4la2qgjs2cb92g3apcqj634j3aabwg2c";
   };
 
   postFixup = ''
@@ -24,8 +24,8 @@ buildPythonPackage rec {
   propagatedBuildInputs = [
     azure-cli-command-modules-nspkg
     azure-cli-core
+    azure-cosmos
     azure-mgmt-cosmosdb
-    pydocumentdb
   ];
 
   doCheck = false;

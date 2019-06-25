@@ -7,12 +7,12 @@
 
 buildPythonPackage rec {
   pname = "azure_mgmt_servicebus";
-  version = "0.5.2";
+  version = "0.6.0";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "12yflarvahk53la51jl482mli302scw8srsjzc87j99c57nycb98";
+    sha256 = "0psc39ir4gp29f8i2y6n38r2mx0zixpwr2yxhm4yz6dsspzjd9xz";
   };
 
   propagatedBuildInputs = [

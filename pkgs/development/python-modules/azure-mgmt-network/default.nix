@@ -7,12 +7,12 @@
 
 buildPythonPackage rec {
   pname = "azure_mgmt_network";
-  version = "2.2.1";
+  version = "3.0.0";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "1q99cvpshwxy487yh3xfa3iqis4xc574wa0nzlm76hbf2rn9g8h5";
+    sha256 = "1qvl9amyczb628k23wd4x5h3g74wjdv5qx2v5zpjkbhsmsr764v1";
   };
 
   propagatedBuildInputs = [
