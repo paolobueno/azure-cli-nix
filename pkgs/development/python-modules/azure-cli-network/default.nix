@@ -4,17 +4,16 @@
 , azure-mgmt-dns
 , azure-mgmt-network
 , azure-mgmt-trafficmanager
-, mock
 }:
 
 buildPythonPackage rec {
   pname = "azure_cli_network";
-  version = "2.2.7";
+  version = "2.5.2";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "0g61075pwmqnrwg1xg56lpwiac3nsy1cr03xs3zrxpk2kkq9hymv";
+    sha256 = "1c9kdqlhdcgjb75f560aq0d7vr2n7lm6if6cg0b5y8vybq66gzdc";
   };
 
   postFixup = ''
@@ -29,7 +28,6 @@ buildPythonPackage rec {
     azure-mgmt-dns
     azure-mgmt-network
     azure-mgmt-trafficmanager
-    mock
   ];
 
   doCheck = false;

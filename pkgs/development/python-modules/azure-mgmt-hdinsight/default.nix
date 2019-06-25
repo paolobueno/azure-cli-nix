@@ -7,12 +7,12 @@
 
 buildPythonPackage rec {
   pname = "azure_mgmt_hdinsight";
-  version = "0.1.0";
+  version = "0.2.1";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "1b9w0djd8pv6cznfhdn2k76px75zm3slzjk1l0qjr9g8a7v84sfm";
+    sha256 = "0q93dlafg4mqqzhg8wxwkzzzwj3sfjbi68hqn9ihb9j42xhqni6x";
   };
 
   propagatedBuildInputs = [

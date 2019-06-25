@@ -4,12 +4,12 @@
 
 buildPythonPackage rec {
   pname = "humanfriendly";
-  version = "4.16.1";
+  version = "4.18";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "0qs3ck0zn98cnmafnwrby7r8qbj5d3jdrwkb4l3339s1pjp6l6a9";
+    sha256 = "07arwnyin4liavbhvp5v37v1kfcafsv3q3m2qdxjwy3gml87n193";
   };
 
   propagatedBuildInputs = [

@@ -2,16 +2,18 @@
 , azure-cli-command-modules-nspkg
 , azure-cli-core
 , azure-mgmt-hdinsight
+, azure-mgmt-network
+, azure-mgmt-storage
 }:
 
 buildPythonPackage rec {
   pname = "azure_cli_hdinsight";
-  version = "0.1.0";
+  version = "0.3.5";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "1z57iwig06z4bbwjvynh7vrppx3spqdx72gir2r97994dw20i432";
+    sha256 = "1w6zwl1xy3wsdfvb0di3z7xi8sgdxv2q9fgzfl82cwn16s9q4qgk";
   };
 
   postFixup = ''
@@ -24,6 +26,8 @@ buildPythonPackage rec {
     azure-cli-command-modules-nspkg
     azure-cli-core
     azure-mgmt-hdinsight
+    azure-mgmt-network
+    azure-mgmt-storage
   ];
 
   doCheck = false;

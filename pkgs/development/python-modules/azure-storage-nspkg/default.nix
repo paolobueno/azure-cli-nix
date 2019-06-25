@@ -4,11 +4,11 @@
 
 buildPythonPackage rec {
   pname = "azure-storage-nspkg";
-  version = "3.0.0";
+  version = "3.1.0";
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "0rmlsdfnrzgvqkmbmkwwmy2gk8ap60dpw4i5h239brn07301alw5";
+    sha256 = "0gkhm597x691fs50shv6ghkd54446bw9mbjkgyjn9i5qfdnbv8vx";
   };
 
   propagatedBuildInputs = [

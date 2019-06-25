@@ -1,17 +1,18 @@
 { stdenv, buildPythonPackage, fetchPypi
 , azure-common
 , azure-mgmt-nspkg
+, msrest
 , msrestazure
 }:
 
 buildPythonPackage rec {
   pname = "azure-mgmt-eventgrid";
-  version = "0.4.0";
+  version = "2.2.0";
 
   src = fetchPypi {
     inherit pname version;
     extension = "zip";
-    sha256 = "1b49qxj6kmjmpr1m5dk30xwjk4vv7i7a358nv0h7wqjkwigij8ng";
+    sha256 = "1q57zs6r57mfvypncxv45jjlqvfgbs1k04b1rgsscsr009scnw73";
   };
 
   # Fix build w/ wheel 0.31, see https://github.com/Azure/azure-storage-python/pull/443
@@ -23,6 +24,7 @@ buildPythonPackage rec {
   propagatedBuildInputs = [
     azure-common
     azure-mgmt-nspkg
+    msrest
     msrestazure
   ];
 

@@ -3,16 +3,18 @@
 , azure-cli-core
 , azure-mgmt-botservice
 , azure-mgmt-web
+, cryptography
+, requests
 }:
 
 buildPythonPackage rec {
   pname = "azure_cli_botservice";
-  version = "0.1.1";
+  version = "0.2.2";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "0zrk1rs8cspr6rchjfpfm6i1lhaxdgf1y3l118jvbk8702bb6ify";
+    sha256 = "0iq48wzamd4gdc3p8wbdv8q2a4hm0xw4v4k276a7gd980hf80skd";
   };
 
   propagatedBuildInputs = [
@@ -20,6 +22,8 @@ buildPythonPackage rec {
     azure-cli-core
     azure-mgmt-botservice
     azure-mgmt-web
+    cryptography
+    requests
   ];
 
   doCheck = false;

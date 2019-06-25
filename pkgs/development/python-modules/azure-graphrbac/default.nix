@@ -7,12 +7,12 @@
 
 buildPythonPackage rec {
   pname = "azure_graphrbac";
-  version = "0.51.1";
+  version = "0.60.0";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "1zx1b6cxl9x3m6j2f53qylbzfx6ka8f1ar971cjrvypa9zfz3h29";
+    sha256 = "0yady5vcwc8n7nhimfyc5km9vgvjq6x69k3076hxqcf6vw16c9hb";
   };
 
   propagatedBuildInputs = [

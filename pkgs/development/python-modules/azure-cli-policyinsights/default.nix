@@ -6,12 +6,12 @@
 
 buildPythonPackage rec {
   pname = "azure_cli_policyinsights";
-  version = "0.1.0";
+  version = "0.1.4";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "0q6ynqyr2kw4lllfwg0a29qvmcjk2b38cxkbdr7kf0j10f3vc55d";
+    sha256 = "162d7ar82cs8x481jhwrp9d428ww00l99rlwahmdnxk1q0lk0v6a";
   };
 
   propagatedBuildInputs = [

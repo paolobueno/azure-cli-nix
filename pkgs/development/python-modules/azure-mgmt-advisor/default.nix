@@ -1,17 +1,18 @@
 { stdenv, buildPythonPackage, fetchPypi
 , azure-common
 , azure-mgmt-nspkg
+, msrest
 , msrestazure
 }:
 
 buildPythonPackage rec {
   pname = "azure-mgmt-advisor";
-  version = "1.0.1";
+  version = "2.0.1";
 
   src = fetchPypi {
     inherit pname version;
     extension = "zip";
-    sha256 = "1nh57gv0y7z3xs1rs4w6ndvjg0k1p8fw3bjyhdmnw88afqgv9p4g";
+    sha256 = "1pi6pscrgcz5bny4kww7vabv1c6fwbp1wnglpxw59lqwsy442hly";
   };
 
   # Fix build w/ wheel 0.31, see https://github.com/Azure/azure-storage-python/pull/443
@@ -23,6 +24,7 @@ buildPythonPackage rec {
   propagatedBuildInputs = [
     azure-common
     azure-mgmt-nspkg
+    msrest
     msrestazure
   ];
 

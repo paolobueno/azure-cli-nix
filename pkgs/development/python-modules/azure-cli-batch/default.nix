@@ -8,12 +8,12 @@
 
 buildPythonPackage rec {
   pname = "azure_cli_batch";
-  version = "3.4.1";
+  version = "4.0.3";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "19z76ik99vl6i20jvad8mys5jhrcy181kqw18lwnmp8945ir1lfk";
+    sha256 = "1prrxh0gpq621smzv75g5mkd123rj9zvb8qd04694jwpyrximlig";
   };
 
   postFixup = ''

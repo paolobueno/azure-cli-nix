@@ -5,12 +5,12 @@
 
 buildPythonPackage rec {
   pname = "msrestazure";
-  version = "0.5.0";
+  version = "0.6.1";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "0q1nvwv3wi2ghpp9h4b0civfwy6w6n1h3cxh65dz18si0cyivwvk";
+    sha256 = "14ahwb7d9zc34k8czkwkb04f88z0lhcswa718hvhgwc83nqjbmg9";
   };
 
   propagatedBuildInputs = [

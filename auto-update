@@ -4,7 +4,7 @@ set -e
 set -o pipefail
 
 run() {
-  docker run --rm microsoft/azure-cli sh -c "cd /usr/local/lib/python3.6/site-packages && $*"
+  docker run --rm mcr.microsoft.com/azure-cli sh -c "cd /usr/local/lib/python3.6/site-packages && $*"
 }
 
 handleModule() {

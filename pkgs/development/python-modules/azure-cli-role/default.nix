@@ -10,12 +10,12 @@
 
 buildPythonPackage rec {
   pname = "azure_cli_role";
-  version = "2.1.8";
+  version = "2.6.4";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "1ha9zlgb3cd4d0m9x0ahl9z2qc7iipr5j4fg0p9q9hwxlxhkfb9j";
+    sha256 = "1ybf68z9xha27hdzwh5l6pyjab0k8gmj5r2fydz2argdig7ismha";
   };
 
   postFixup = ''

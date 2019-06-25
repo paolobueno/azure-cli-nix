@@ -8,12 +8,12 @@
 
 buildPythonPackage rec {
   pname = "azure_cli_sql";
-  version = "2.1.5";
+  version = "2.2.5";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "0ii07qq291jvpzbx7lh77kw1y7whzkbblvhsvi2np0bnhjbf6n8h";
+    sha256 = "1pkzhhi96sggrrxn9kc9jc5ifb7pph9d8jkg8d7vh22bj9rdmn4g";
   };
 
   postFixup = ''

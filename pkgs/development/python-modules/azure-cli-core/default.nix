@@ -1,21 +1,27 @@
 { stdenv, buildPythonPackage, fetchPypi, python
 , adal
+, antlr4-python2-runtime
 , antlr4-python3-runtime
 , argcomplete
 , azure-cli-nspkg
 , azure-cli-telemetry
 , azure-mgmt-resource
 , colorama
+, futures
 , humanfriendly
 , jmespath
 , knack
 , msrest
 , msrestazure
+, ndg-httpsclient
 , paramiko
 , pip
+, psutil
+, pyasn1
 , pygments
 , pyjwt
 , pyopenssl
+, pyperclip
 , pyyaml
 , requests
 , six
@@ -25,11 +31,11 @@
 
 buildPythonPackage rec {
   pname = "azure-cli-core";
-  version = "2.0.49";
+  version = "2.0.67";
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "1vb3rmvlfaw8wlgi4f3ay2i0nr3j86x0ydxy04rf3ylp8kw7r5km";
+    sha256 = "16cjx5wnn5ar2969m2sgyrzgia90rdzgl179rmch78siswfw9wx3";
   };
 
   # Hackily force build w/ wheel 0.31
@@ -45,6 +51,7 @@ buildPythonPackage rec {
 
   propagatedBuildInputs = [
     adal
+    antlr4-python2-runtime
     antlr4-python3-runtime
     argcomplete
     azure-cli-nspkg
@@ -56,11 +63,15 @@ buildPythonPackage rec {
     knack
     msrest
     msrestazure
+    ndg-httpsclient
     paramiko
     pip
+    psutil
+    pyasn1
     pygments
     pyjwt
     pyopenssl
+    pyperclip
     pyyaml
     requests
     six

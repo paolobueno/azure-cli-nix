@@ -1,9 +1,13 @@
 { stdenv, buildPythonPackage, fetchPypi, python
 , azure-cli-command-modules-nspkg
 , azure-cli-core
+, azure-functions-devops-build
+, azure-mgmt-applicationinsights
 , azure-mgmt-containerregistry
 , azure-mgmt-storage
 , azure-mgmt-web
+, cryptography
+, fabric
 , pyopenssl
 , six
 , urllib3
@@ -13,12 +17,12 @@
 
 buildPythonPackage rec {
   pname = "azure_cli_appservice";
-  version = "0.2.5";
+  version = "0.2.21";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "0m7zm0snfh8f1msi5ivv5azkm3l91ixcy84g1ldv2jfxdg9y1d9d";
+    sha256 = "1krzbbqlnfrx80969ldndkf85fqivf7k2l3yq17zmvhh6hkddbv2";
   };
 
   postFixup = ''
@@ -30,9 +34,13 @@ buildPythonPackage rec {
   propagatedBuildInputs = [
     azure-cli-command-modules-nspkg
     azure-cli-core
+    azure-functions-devops-build
+    azure-mgmt-applicationinsights
     azure-mgmt-containerregistry
     azure-mgmt-storage
     azure-mgmt-web
+    cryptography
+    fabric
     pyopenssl
     six
     urllib3

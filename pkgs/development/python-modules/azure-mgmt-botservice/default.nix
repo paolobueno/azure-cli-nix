@@ -7,12 +7,12 @@
 
 buildPythonPackage rec {
   pname = "azure_mgmt_botservice";
-  version = "0.1.0";
+  version = "0.2.0";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "0wnsw89w85qq6f2pc4x2m1mjp7995iay6ya80m2dqi17c6z7kxqx";
+    sha256 = "1c9gzzrxmy10g3bxqq058ywvv6r4kfv22mlvdpzj2jna97488m9p";
   };
 
   propagatedBuildInputs = [

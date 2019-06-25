@@ -13,12 +13,12 @@
 
 buildPythonPackage rec {
   pname = "azure_cli_servicefabric";
-  version = "0.1.6";
+  version = "0.1.20";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "0vw7nmg99q2nll1afc9spsw9ry64xrnqsikql3b2rcjmh919mvjv";
+    sha256 = "0a5var188in0sy3x40k9bcwhwgiy8qyhdm2zx8w18cixl4andifp";
   };
 
   postFixup = ''

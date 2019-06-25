@@ -1,22 +1,24 @@
 { stdenv, buildPythonPackage, fetchPypi
 , azure-common
 , azure-mgmt-nspkg
+, msrest
 , msrestazure
 }:
 
 buildPythonPackage rec {
   pname = "azure_mgmt_batch";
-  version = "5.0.1";
+  version = "6.0.0";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "0qc10a3sac5k9sgh2fmya4kdkb6b1ap8kr23gbhal1qd30jy4hnr";
+    sha256 = "1dw15s403jcdv5cprkbxy7xlhzz0bkkqvqx0mmjhysbkj0kfccd7";
   };
 
   propagatedBuildInputs = [
     azure-common
     azure-mgmt-nspkg
+    msrest
     msrestazure
   ];
 

@@ -1,17 +1,15 @@
 { stdenv, buildPythonPackage, fetchPypi, python
 , azure-cli-command-modules-nspkg
 , azure-cli-core
-, pip
-, wheel
 }:
 
 buildPythonPackage rec {
   pname = "azure-cli-extension";
-  version = "0.2.2";
+  version = "0.2.5";
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "1l4c0yn2yp6h4dlgny6abd8gmv27bzrrx1153y5w1g59bigbyx5w";
+    sha256 = "1fbqij3rlfcz37v0c6c0gm389mjks0dhxvimc27nmik70jwjgqgb";
   };
 
   # Hackily force build w/ wheel 0.31
@@ -29,8 +27,6 @@ buildPythonPackage rec {
   propagatedBuildInputs = [
     azure-cli-command-modules-nspkg
     azure-cli-core
-    pip
-    wheel
   ];
 
   doCheck = false;

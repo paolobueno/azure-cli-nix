@@ -5,12 +5,12 @@
 
 buildPythonPackage rec {
   pname = "azure_cli_cloud";
-  version = "2.1.0";
+  version = "2.1.1";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "1kcszn6k29ns2gww5229cy9jd8b0hm51y93rxfhp4xydpgw32l98";
+    sha256 = "1m66vdkg7ivkprqci87mmn5lsvxi94q1s91d5wcni24ply6jdw0d";
   };
 
   propagatedBuildInputs = [

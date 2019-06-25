@@ -6,12 +6,12 @@
 
 buildPythonPackage rec {
   pname = "azure_cli_billing";
-  version = "0.2.0";
+  version = "0.2.2";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "12vxv7g45r53fcnzlsah9jdr1y3grb2jwh0g8dq8ypr1wh3vy2h4";
+    sha256 = "1fmaq2jcz46aibbr3505kvs4l5rzv3xj60alxmm6pxiz8j1cvcns";
   };
 
   propagatedBuildInputs = [

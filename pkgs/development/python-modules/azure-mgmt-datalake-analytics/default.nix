@@ -6,12 +6,12 @@
 
 buildPythonPackage rec {
   pname = "azure-mgmt-datalake-analytics";
-  version = "0.2.0";
+  version = "0.2.1";
 
   src = fetchPypi {
     inherit pname version;
     extension = "zip";
-    sha256 = "0w02j14kyvgrq3qwhnz2wrqjjjzr13vpcs1yazcpwgaqwa5h1srd";
+    sha256 = "1n2n561xk7dwpk2vv8fc00141hhpz8ab5a8jjnfjcjsw947n60jd";
   };
 
   propagatedBuildInputs = [

@@ -6,12 +6,12 @@
 
 buildPythonPackage rec {
   pname = "azure_cli_advisor";
-  version = "0.6.0";
+  version = "2.0.1";
   format = "wheel";
 
   src = fetchPypi {
     inherit pname version format;
-    sha256 = "1awja7di1gdw32jr0q6srijk2msk60g5aqyy4jaancb3vbqv8r26";
+    sha256 = "0fnq14ir76c4hpfrfzi9sks83fhh73mhj22z7a9sd9ycq8whhwj1";
   };
 
   propagatedBuildInputs = [
